@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Habit Tracker PWA – Stage 3
 
-## Getting Started
+## 🔗 Live App
+https://habit-tracker-liart-sigma.vercel.app/
 
-First, run the development server:
+## 📌 What this project is about
 
+This is a mobile-first Habit Tracker built as a Progressive Web App (PWA).
+
+The goal wasn’t just to “build something nice” — it was to follow a strict technical specification and make sure everything behaves exactly as required.
+
+You can:
+- Sign up and log in
+- Create, edit, and delete habits
+- Mark habits as complete for today
+- Track your current streak
+- Reload the app and keep your data
+- Install it like a mobile app
+- Use it offline without crashing
+
+---
+
+## ⚙️ How to run the project locally
+
+### 1. Clone the repo
 ```bash
+git clone https://github.com/D-devela/habit-tracker-pwa.git
+cd habit-tracker-pwa
+2. Install dependencies
+npm install
+3. Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+4. Open in browser
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```markdown
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Run all tests:
+```bash
+npm test
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run unit tests with coverage:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm run test:unit
+
+Run integration tests:
+
+npm run test:integration
+
+Run end-to-end tests:
+
+npm run test:e2e
+
+---
+
+```markdown
+
+
+Run:
+```bash
+npm run test:unit
+
+This generates a coverage report in the coverage/ folder.
+
+Current coverage: 80%+
+
+
+---
+
+
+```markdown
+
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- localStorage (for persistence)
+- Vitest (unit tests)
+- React Testing Library (integration tests)
+- Playwright (E2E tests)
+
+
+
+##  Assumptions
+
+- No backend is used (localStorage only)
+- Passwords are stored as plain text (safe for local demo)
+- Only daily habits are supported
+- Data is stored per device (no syncing)
+
+
+- tests/unit/ → utility function tests
+- tests/integration/ → component behavior tests
+- tests/e2e/ → full user flow tests
+

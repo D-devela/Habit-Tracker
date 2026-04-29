@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
+"lib": [
       "DOM",
       "DOM.Iterable",
       "ES2020"
     ],
+    "types": ["vitest/globals", "node"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
